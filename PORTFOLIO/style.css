@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: serif;
     margin: 0;
@@ -29,26 +33,10 @@ section {
     align-items: flex-start;
 }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
 .contact,
 form {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 5px;
     margin: 5px;
     gap: 10px;
@@ -60,6 +48,12 @@ textarea {
     border-radius: 5px;
 }
 
+button {
+    padding: 8px;
+    align-self: center;
+    cursor: pointer;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -67,4 +61,55 @@ footer {
     padding: 20px;
     justify-content: center;
     align-items: center;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* Reduce overall spacing */
+    main {
+        margin: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    /* Header text scaling */
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h3 {
+        font-size: 1rem;
+    }
+
+    /* Skills section fix */
+    .skills ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Projects spacing */
+    .projects li {
+        margin-bottom: 10px;
+    }
+
+    /* Form inputs full width */
+    input,
+    textarea {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    /* Improve text readability */
+    p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 }

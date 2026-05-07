@@ -45,7 +45,6 @@ form {
 input,
 textarea {
     padding: 5px;
-    /* border-radius: 5px; */
 }
 
 button {
@@ -112,4 +111,48 @@ footer {
         font-size: 0.95rem;
         line-height: 1.5;
     }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PROJECT GRID */
+.project-grid {
+    display: grid;
+
+    /* 3 responsive columns */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* PROJECT CARD */
+.project-card {
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    border: 1px solid #000000;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h4 {
+    margin-top: 0;
+}
+
+.project-card p {
+    line-height: 1.5;
+}
+
+/* LINK */
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: bold;
 }
